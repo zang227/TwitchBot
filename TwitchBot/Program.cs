@@ -229,7 +229,6 @@ namespace TwitchBot
             var twitchBot = new Bot(botUsername, password);
             twitchBot.Start().SafeFireAndForget();
             await twitchBot.JoinChannel("rare_gangster");
-            //await twitchBot.SendMessage("zang227", "Hey my bot has started up");
             twitchBot.OnMessage += async (sender, twitchChatMessage) =>
             {
                 if (twitchChatMessage.Message.StartsWith("$raffle"))
